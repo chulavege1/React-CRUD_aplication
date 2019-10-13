@@ -1,0 +1,48 @@
+{
+  "name": "WorkCyberialEnvironment",
+  "description": "Gulp + Webpack",
+  "main": "index.js",
+  "author": "Cyberial Synthwaiser",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "webpack-dev-server --mode development --open",
+    "clear": "del-cli dist",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "2.26.7",
+    "css-loader": "^3.2.0",
+    "del-cli": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.2.0",
+    "gulp-sass": "^4.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "npm-check-updates": "^3.1.22",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}

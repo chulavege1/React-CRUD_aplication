@@ -4,8 +4,8 @@ import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 class Aplication extends React.Component {
     constructor(props) {
         super(props);
-        if(localStorage.userRegistrInfo === undefined){
-            ('User setting' + this.userRegistrInfo);
+        if (localStorage.userRegistrInfo === undefined){
+            this.userNotFound = ('User data ' + this.userRegistrInfo + '!');
         }
         else {
             return (
@@ -20,6 +20,7 @@ class Aplication extends React.Component {
 // User data delete
      deleteUserData(){
         localStorage.removeItem('userRegistrInfo');
+        location.reload();
     }
     
     render() {
@@ -44,6 +45,7 @@ class Aplication extends React.Component {
                             </tr>
                         </tbody>
                     </table>
+                    <h1 className='user-not-found'>{this.userNotFound}</h1>
                     <div className='navbar-item'>
                     <li className='btn'>
                         <Link to="/registration" className='btn btn-primary'>Edit</Link>

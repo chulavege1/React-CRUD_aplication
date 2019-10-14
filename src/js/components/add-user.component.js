@@ -44,19 +44,24 @@ onSubmit(e) {
     e.preventDefault();
     let userRegistrInfo = JSON.stringify(this.state);
     localStorage.userRegistrInfo = userRegistrInfo;
+    document.getElementById('acceptUserReg').style.display = 'none';
     this.setState({
         user_name: '',
         user_surname: '',
         user_phone: '',
         user_email: ''
     })
+    document.getElementById('messageUserDataChange').style.display = 'flex';
 }
 
 render() {
     return (
         <div style={{ marginTop: 10 }}>
+            <div>
+                <h1 id='messageUserDataChange'>User create!</h1>
+            </div>
+            <form id='acceptUserReg' onSubmit={this.onSubmit}>
             <h3>Create new user</h3>
-            <form onSubmit={this.onSubmit}>
                 <div className='form-group'>
                     <label>name: </label>
                     <input type='text'
@@ -88,7 +93,8 @@ render() {
                 <div className='registr-side'>
                     <input type='submit'
                         className='btn btn-primary'
-                        value='Registration'></input>
+                        value='Registration'
+                        ></input>
                 </div>
             </form>
         </div>

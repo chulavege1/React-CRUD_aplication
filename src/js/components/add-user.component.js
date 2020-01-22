@@ -57,8 +57,8 @@ onSubmit(e) {
 render() {
     return (
         <div style={{ marginTop: 10 }}>
-            <div>
-                <h1 id='messageUserDataChange'>User create!</h1>
+            <div id='messageUserDataChange'>
+                <h1>User create!</h1>
             </div>
             <form id='acceptUserReg' onSubmit={this.onSubmit}>
             <h3>Create new user</h3>

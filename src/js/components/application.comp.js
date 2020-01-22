@@ -27,6 +27,7 @@ class Aplication extends React.Component {
         return (
             <div className="hes-work">
                 <div className="user-name">
+                
                     <table className='table table-bordered'>
                         <thead>
                             <tr>
@@ -45,21 +46,22 @@ class Aplication extends React.Component {
                             </tr>
                         </tbody>
                     </table>
-                    <h1 className='user-not-found'>{this.userNotFound}</h1>
+                    
+                <h1 className='user-not-found'>{this.userNotFound}</h1>
                     <div className='navbar-item'>
-                    <li className='btn'>
-                        <Link to="/registration" className='btn btn-primary'>Edit</Link>
-                    </li>
-                    <li>
-                    <label>Need Import JSON? </label>
-                        <input type='button'
-                               className='form-control'></input>
-                    </li>
-                    <Route path='/registration'></Route>
-                    <li className='btn'>
-                        <button onClick={this.deleteUserData}
-                                className='btn btn-primary'>Delete user</button>
-                    </li>
+                        <li className='btn'>
+                            <Link to="/registration" className='btn btn-primary'>Edit</Link>
+                        </li>
+                        <li>
+                        <label>Need Import JSON?</label>
+                            <input type='button'
+                                className='form-control'></input>
+                        </li>
+                        <Route path='/registration'></Route>
+                        <li className='btn'>
+                            <button onClick={this.deleteUserData}
+                                    className='btn btn-primary'>Delete user</button>
+                        </li>
                     </div>
                 </div>
             </div>
